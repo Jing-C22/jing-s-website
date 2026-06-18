@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jing Chua — Supply Chain & Analytics Student | Aspiring Accountant</title>
+<meta name="description" content="Portfolio of Jing Chua, a Supply Chain Management & Analytics student transitioning into Accounting — coursework, hands-on internship experience, and project work.">
+<meta name="theme-color" content="#3F6B4A">
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233F6B4A'/%3E%3Ctext x='32' y='43' font-family='Georgia, serif' font-size='26' font-weight='600' fill='%23F7F5F0' text-anchor='middle'%3EJC%3C/text%3E%3C/svg%3E">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jing Chua — Supply Chain & Analytics Student, Transitioning to Accounting">
+<meta property="og:description" content="UTD Supply Chain Management & Analytics student (GPA 3.95, Dean's List) with hands-on operations, invoicing, and data management experience.">
+<meta property="og:image" content="og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Jing Chua — Supply Chain & Analytics Student, Transitioning to Accounting">
+<meta name="twitter:description" content="UTD Supply Chain Management & Analytics student (GPA 3.95, Dean's List) with hands-on operations, invoicing, and data management experience.">
+<meta name="twitter:image" content="og-image.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spectral:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --oat:#F7F5F0;
+    --card:#FFFFFF;
+    --ink:#23211D;
+    --ink-soft:#6B6459;
+    --sage:#3F6B4A;
+    --sage-deep:#2E4F37;
+    --sage-tint:#E3ECE2;
+    --line:#DCD6C8;
+    --rule:rgba(35,33,29,0.045);
+    --radius-lg:16px;
+    --radius-md:10px;
+    --radius-sm:6px;
+    --maxw:1080px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--oat);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--sage-tint);}
+  :focus-visible{outline:2px solid var(--sage); outline-offset:3px; border-radius:2px;}
+
+  h1,h2,h3{
+    font-family:'Spectral',serif;
+    font-weight:600;
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+
+  .mono{font-family:'IBM Plex Mono',monospace;}
+
+  .eyebrow{
+    display:flex;
+    align-items:baseline;
+    gap:8px;
+    font-size:0.78rem;
+    font-weight:600;
+    letter-spacing:0.04em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin-bottom:12px;
+  }
+  .eyebrow .folio{
+    font-family:'IBM Plex Mono',monospace;
+    font-weight:500;
+    color:var(--sage-deep);
+    letter-spacing:0.06em;
+  }
+  .eyebrow .sep{color:var(--line);}
+
+  .wrap{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:0 28px;
+  }
+
+  a{color:var(--sage-deep);}
+
+  .ruled{
+    background-color:var(--card);
+    background-image:repeating-linear-gradient(
+      to bottom,
+      var(--rule) 0,
+      var(--rule) 1px,
+      transparent 1px,
+      transparent 28px
+    );
+  }
+
+
+  .progress-bar{
+    position:fixed;
+    top:0; left:0;
+    height:3px;
+    width:0%;
+    background:var(--sage);
+    z-index:60;
+    transition:width .08s linear;
+  }
+
+  /* ---------- NAV ---------- */
+  header.nav{
+    position:sticky;
+    top:0;
+    z-index:50;
+    background:rgba(247,245,240,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    max-width:var(--maxw);
+    margin:0 auto;
+    padding:18px 28px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+  }
+  .nav-logo{
+    font-family:'Spectral',serif;
+    font-weight:600;
+    font-size:1.1rem;
+    text-decoration:none;
+    color:var(--ink);
+  }
+  nav.links{
+    display:flex;
+    gap:32px;
+    list-style:none;
+  }
+  nav.links a{
+    text-decoration:none;
+    color:var(--ink);
+    font-size:0.92rem;
+    font-weight:500;
+    position:relative;
+    padding-bottom:4px;
+  }
+  nav.links a::after{
+    content:"";
+    position:absolute;
+    left:0;bottom:0;
+    width:0;height:2px;
+    background:var(--sage);
+    transition:width .25s ease;
+  }
+  nav.links a:hover::after{width:100%;}
+  nav.links a.is-active{color:var(--sage-deep);}
+  nav.links a.is-active::after{width:100%;}
+
+  #navToggle{display:none;}
+  .burger{
+    display:none;
+    flex-direction:column;
+    gap:5px;
+    cursor:pointer;
+    background:none;
+    border:none;
+    padding:6px;
+  }
+  .burger span{width:24px;height:2px;background:var(--ink);display:block;}
+
+  @media (max-width:760px){
+    nav.links{
+      position:absolute;
+      top:100%;
+      left:0;right:0;
+      background:var(--card);
+      flex-direction:column;
+      padding:20px 28px;
+      gap:18px;
+      border-bottom:1px solid var(--line);
+      display:none;
+    }
+    #navToggle:checked ~ nav.links{display:flex;}
+    .burger{display:flex;}
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{padding:72px 0 48px;}
+  .hero-card{
+    border:1px solid var(--line);
+    border-radius:var(--radius-lg);
+    padding:52px clamp(28px,6vw,64px);
+    box-shadow:0 1px 2px rgba(38,35,32,0.03);
+  }
+  .folio-tag{
+    font-size:0.74rem;
+    font-weight:500;
+    letter-spacing:0.08em;
+    color:var(--ink-soft);
+    margin-bottom:18px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .folio-tag::after{
+    content:"";
+    height:1px;
+    flex:1;
+    background:var(--line);
+  }
+
+  .hero h1{
+    font-size:clamp(2.3rem,5vw,3.1rem);
+    color:var(--ink);
+  }
+  .hero .role{
+    margin-top:8px;
+    font-size:1.05rem;
+    font-weight:500;
+    color:var(--ink-soft);
+  }
+  .hero p.tagline{
+    margin-top:18px;
+    font-size:1.02rem;
+    color:var(--ink-soft);
+    max-width:580px;
+  }
+  .hero .transition-line{
+    margin-top:16px;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-size:0.92rem;
+    font-weight:500;
+    color:var(--sage-deep);
+  }
+
+  .hero-cta{
+    margin-top:34px;
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+  }
+  .btn{
+    font-family:'Inter',sans-serif;
+    font-weight:600;
+    font-size:0.92rem;
+    padding:12px 24px;
+    border-radius:8px;
+    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    transition:transform .15s ease, box-shadow .15s ease, background .15s ease;
+    border:1.5px solid transparent;
+    cursor:pointer;
+  }
+  .btn:hover{transform:translateY(-1px);}
+  .btn--solid{background:var(--sage); color:#fff;}
+  .btn--solid:hover{box-shadow:0 8px 18px -10px var(--sage-deep); background:var(--sage-deep);}
+  .btn--ghost{background:transparent; border-color:var(--line); color:var(--ink);}
+  .btn--ghost:hover{border-color:var(--sage);}
+
+  /* ---------- SECTIONS GENERAL ---------- */
+  section{padding:76px 0;}
+  section .section-head{margin-bottom:38px; max-width:620px;}
+  section h2{font-size:1.85rem;}
+
+  .rule-draw{
+    display:block;
+    height:1px;
+    width:100%;
+    background:var(--line);
+    margin-bottom:20px;
+    transform-origin:left;
+    transform:scaleX(0);
+    transition:transform .7s ease;
+  }
+  .section-head.is-visible .rule-draw{transform:scaleX(1);}
+
+  .reveal{
+    opacity:0;
+    transform:translateY(14px);
+    transition:opacity .6s ease, transform .6s ease;
+  }
+  .reveal.is-visible{opacity:1; transform:translateY(0);}
+  @media (prefers-reduced-motion: reduce){
+    .reveal{opacity:1; transform:none; transition:none;}
+  }
+
+  /* ---------- ABOUT ---------- */
+  .about-grid{
+    display:grid;
+    grid-template-columns:220px 1fr;
+    gap:48px;
+    align-items:start;
+  }
+  .photo-frame{
+    background:var(--card);
+    border-radius:var(--radius-md);
+    border:1px solid var(--line);
+    aspect-ratio:1/1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:var(--ink-soft);
+    font-size:0.82rem;
+    text-align:center;
+    padding:16px;
+  }
+  .about-text p{color:var(--ink-soft); margin:0 0 16px;}
+  .about-text p:last-of-type{margin-bottom:24px;}
+
+  @media (max-width:720px){
+    .about-grid{grid-template-columns:1fr;}
+    .photo-frame{max-width:200px;}
+  }
+
+  /* ---------- SKILLS LEDGER (T-ACCOUNT) ---------- */
+  .ledger-block{
+    border:1px solid var(--line);
+    border-radius:var(--radius-md);
+    padding:30px clamp(20px,5vw,44px) 34px;
+    margin-top:8px;
+  }
+  .ledger-block__title{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:0.72rem;
+    text-transform:uppercase;
+    letter-spacing:0.1em;
+    color:var(--ink-soft);
+    margin-bottom:18px;
+    text-align:center;
+  }
+
+  .ledger-filter{
+    display:flex;
+    gap:8px;
+    justify-content:center;
+    margin-bottom:26px;
+    flex-wrap:wrap;
+  }
+  .ledger-filter__btn{
+    font-family:'Inter',sans-serif;
+    font-size:0.8rem;
+    font-weight:600;
+    padding:7px 15px;
+    border-radius:999px;
+    border:1px solid var(--line);
+    background:transparent;
+    color:var(--ink-soft);
+    cursor:pointer;
+    transition:background .15s ease, color .15s ease, border-color .15s ease;
+  }
+  .ledger-filter__btn:hover{border-color:var(--sage);}
+  .ledger-filter__btn.is-active{background:var(--sage); color:#fff; border-color:var(--sage);}
+
+  .t-account{position:relative;}
+  .t-account__divider{
+    position:absolute;
+    left:50%; top:0; bottom:0;
+    width:1px;
+    background:var(--ink);
+    opacity:0.35;
+  }
+  .t-account__row{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+  }
+  .t-account__row--head{
+    border-bottom:1.5px solid var(--ink);
+    padding-bottom:12px;
+    margin-bottom:16px;
+  }
+  .t-account__row--head .t-account__cell{
+    font-family:'Inter',sans-serif;
+    font-weight:600;
+    font-size:0.92rem;
+    text-align:center;
+    color:var(--ink);
+  }
+  .t-account__cell{padding:0 26px; transition:opacity .25s ease;}
+  .t-account__row:not(.t-account__row--head) .t-account__cell ul{
+    list-style:none; margin:0; padding:0;
+    color:var(--ink-soft); font-size:0.9rem;
+  }
+  .t-account__row:not(.t-account__row--head) li{
+    margin-bottom:2px;
+    padding:7px 0 7px 16px;
+    position:relative;
+    border-radius:5px;
+    transition:background .15s ease, padding-left .15s ease;
+  }
+  .t-account__row:not(.t-account__row--head) li::before{
+    content:"–";
+    position:absolute; left:0; top:7px;
+    color:var(--sage);
+  }
+  .t-account__row:not(.t-account__row--head) li:hover{
+    background:var(--sage-tint);
+    padding-left:22px;
+  }
+
+  .t-account[data-filter="supply"] .t-account__cell[data-side="accounting"],
+  .t-account[data-filter="accounting"] .t-account__cell[data-side="supply"]{
+    opacity:0.3;
+  }
+
+  @media (max-width:640px){
+    .t-account__row{grid-template-columns:1fr;}
+    .t-account__divider{display:none;}
+    .t-account__row--head{display:none;}
+    .t-account__cell{padding:0; margin-bottom:20px;}
+    .t-account__cell::before{
+      content:attr(data-label);
+      display:block;
+      font-family:'Inter',sans-serif;
+      font-weight:600;
+      font-size:0.92rem;
+      margin-bottom:10px;
+      border-bottom:1.5px solid var(--ink);
+      padding-bottom:8px;
+    }
+  }
+
+  /* ---------- EXPERIENCE TIMELINE ---------- */
+  .timeline{position:relative; padding-left:28px;}
+  .timeline::before{
+    content:"";
+    position:absolute;
+    left:5px; top:6px; bottom:6px;
+    width:2px;
+    background:var(--line);
+  }
+  .t-item{position:relative; margin-bottom:36px;}
+  .t-item:last-child{margin-bottom:0;}
+  .t-item::before{
+    content:"";
+    position:absolute;
+    left:-28px; top:5px;
+    width:11px;height:11px;
+    background:var(--sage);
+    border-radius:2px;
+  }
+  .t-card{
+    border:1px solid var(--line);
+    border-radius:var(--radius-md);
+    padding:26px 30px;
+    display:block;
+  }
+  .t-card summary{
+    list-style:none;
+    cursor:pointer;
+    position:relative;
+    padding-right:38px;
+  }
+  .t-card summary::-webkit-details-marker{display:none;}
+  .t-card .t-meta{
+    display:flex;
+    align-items:baseline;
+    gap:10px;
+    margin-bottom:8px;
+    flex-wrap:wrap;
+  }
+  .t-card .t-no{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:0.76rem;
+    font-weight:500;
+    color:var(--sage-deep);
+  }
+  .t-card .t-date{
+    font-size:0.78rem;
+    font-weight:600;
+    color:var(--ink-soft);
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+  }
+  .t-card h3{font-size:1.12rem; margin-bottom:2px;}
+  .t-card .t-org{color:var(--ink-soft); font-size:0.92rem; display:block;}
+  .t-card .t-teaser{color:var(--ink-soft); font-size:0.92rem; margin:10px 0 0;}
+  .t-card ul{margin:0; padding-left:20px; color:var(--ink-soft);}
+  .t-card li{margin-bottom:7px;}
+  .t-card li:last-child{margin-bottom:0;}
+  .t-detail{
+    margin-top:16px;
+    padding-top:16px;
+    border-top:1px solid var(--line);
+  }
+
+  .toggle-row{
+    position:absolute;
+    top:2px; right:0;
+    display:flex;
+    align-items:center;
+    gap:6px;
+  }
+  .toggle-row .toggle-label{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:0.7rem;
+    color:var(--ink-soft);
+    letter-spacing:0.03em;
+  }
+  .chevron{color:var(--ink-soft); transition:transform .2s ease; flex-shrink:0;}
+  details[open] .chevron{transform:rotate(180deg);}
+  details:not([open]) .show-when-open{display:none;}
+  details[open] .show-when-closed{display:none;}
+
+  .placeholder-note{
+    margin-top:4px;
+    font-size:0.88rem;
+    color:var(--ink-soft);
+  }
+
+  /* ---------- EDUCATION ---------- */
+  .edu-card{
+    border:1px solid var(--line);
+    border-radius:var(--radius-md);
+    padding:32px 36px;
+  }
+  .edu-card__top{
+    display:grid;
+    grid-template-columns:1fr auto;
+    gap:24px;
+    align-items:start;
+    margin-bottom:28px;
+  }
+  @media(max-width:600px){
+    .edu-card__top{grid-template-columns:1fr;}
+  }
+  .edu-card h3{font-size:1.25rem; margin-bottom:4px;}
+  .edu-card .edu-school{color:var(--ink-soft); font-size:0.96rem; margin-bottom:12px; display:block;}
+  .edu-card .edu-dates{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:0.74rem;
+    color:var(--sage-deep);
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+    margin-bottom:16px;
+    display:block;
+  }
+  .gpa-badge{
+    text-align:center;
+    background:var(--sage-tint);
+    border-radius:var(--radius-md);
+    padding:18px 28px;
+    min-width:110px;
+    flex-shrink:0;
+  }
+  .gpa-badge .gpa-num{
+    font-family:'Spectral',serif;
+    font-size:2.2rem;
+    font-weight:700;
+    color:var(--sage-deep);
+    display:block;
+    line-height:1.1;
+  }
+  .gpa-badge .gpa-label{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:0.68rem;
+    text-transform:uppercase;
+    letter-spacing:0.08em;
+    color:var(--sage-deep);
+    opacity:0.7;
+  }
+
+  .edu-card__divider{height:1px; background:var(--line); margin-bottom:24px;}
+
+  .deans-list{margin-bottom:24px;}
+  .deans-list__label{
+    font-size:0.78rem;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    color:var(--ink-soft);
+    margin-bottom:10px;
+    display:block;
+  }
+  .deans-list__chips{display:flex; flex-wrap:wrap; gap:8px;}
+  .chip{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:0.76rem;
+    font-weight:500;
+    background:var(--card);
+    border:1px solid var(--line);
+    color:var(--ink-soft);
+    padding:5px 12px;
+    border-radius:999px;
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+  }
+  .chip::before{content:"★"; font-size:0.65rem; color:var(--sage);}
+
+  .coursework-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:8px;
+    align-items:start;
+  }
+  @media(max-width:600px){.coursework-grid{grid-template-columns:1fr;}}
+
+  .course-card{
+    border:1px solid var(--line);
+    border-radius:var(--radius-sm);
+    background:var(--oat);
+    overflow:hidden;
+  }
+  .course-card summary{
+    list-style:none;
+    cursor:pointer;
+    padding:10px 14px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:12px;
+    font-size:0.88rem;
+    font-weight:600;
+    color:var(--ink);
+    user-select:none;
+  }
+  .course-card summary::-webkit-details-marker{display:none;}
+  .course-card summary:hover{background:var(--sage-tint);}
+  .course-card summary .course-name{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    flex:1;
+  }
+  .course-card summary .course-name::before{
+    content:"–";
+    color:var(--sage);
+    flex-shrink:0;
+  }
+  .course-card .course-chevron{
+    color:var(--ink-soft);
+    flex-shrink:0;
+    transition:transform .2s ease;
+  }
+  .course-card[open] .course-chevron{transform:rotate(180deg);}
+  .course-desc{
+    padding:10px 14px 12px 34px;
+    font-size:0.84rem;
+    color:var(--ink-soft);
+    line-height:1.6;
+    border-top:1px solid var(--line);
+    background:var(--card);
+  }
+
+  /* ---------- PROJECTS ---------- */
+  .project-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:24px;
+  }
+  @media (max-width:720px){.project-grid{grid-template-columns:1fr;}}
+
+  .p-card{
+    border:1px solid var(--line);
+    border-top:3px solid var(--sage);
+    border-radius:var(--radius-md);
+    padding:28px;
+  }
+  .p-card:hover{box-shadow:0 14px 28px -20px rgba(38,35,32,0.2);}
+  .p-card summary{
+    list-style:none;
+    cursor:pointer;
+    position:relative;
+    padding-right:38px;
+  }
+  .p-card summary::-webkit-details-marker{display:none;}
+  .p-card .p-kicker{
+    font-size:0.74rem;
+    font-weight:600;
+    color:var(--sage-deep);
+    text-transform:uppercase;
+    letter-spacing:0.06em;
+    margin-bottom:12px;
+    display:block;
+  }
+  .p-card h3{font-size:1.18rem; margin-bottom:8px;}
+  .p-card .p-teaser{color:var(--ink-soft); font-size:0.94rem; margin:0;}
+  .p-card .p-detail{
+    margin-top:16px;
+    padding-top:16px;
+    border-top:1px solid var(--line);
+  }
+  .p-card .p-detail p{color:var(--ink-soft); font-size:0.94rem; margin:0 0 16px;}
+  .p-card .p-tools{display:flex; flex-wrap:wrap; gap:8px;}
+  .p-tag{
+    font-size:0.78rem;
+    font-weight:500;
+    background:var(--sage-tint);
+    color:var(--sage-deep);
+    padding:5px 11px;
+    border-radius:var(--radius-sm);
+  }
+
+  .p-card--empty{
+    border-top-color:var(--line);
+    border-style:dashed;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-start;
+    justify-content:center;
+    color:var(--ink-soft);
+  }
+
+  /* ---------- CONTACT ---------- */
+  .contact-card{
+    border:1px solid var(--line);
+    border-radius:var(--radius-lg);
+    padding:44px clamp(28px,6vw,56px);
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    flex-wrap:wrap;
+    gap:24px;
+  }
+  .contact-card h3{font-size:1.35rem; margin-bottom:14px;}
+  .contact-line{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    color:var(--ink-soft);
+    font-size:0.95rem;
+    margin-bottom:8px;
+  }
+  .contact-line a{color:var(--ink-soft); text-decoration:underline; text-decoration-color:var(--line);}
+  .contact-line svg{flex-shrink:0; color:var(--sage-deep);}
+
+  .copy-btn{
+    position:relative;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    background:transparent;
+    border:1px solid var(--line);
+    border-radius:6px;
+    padding:4px;
+    color:var(--ink-soft);
+    cursor:pointer;
+    transition:border-color .15s ease, color .15s ease;
+  }
+  .copy-btn:hover{border-color:var(--sage); color:var(--sage-deep);}
+  .copy-feedback{
+    position:absolute;
+    bottom:calc(100% + 8px);
+    left:50%;
+    transform:translateX(-50%);
+    background:var(--ink);
+    color:#fff;
+    font-size:0.72rem;
+    font-weight:500;
+    padding:4px 9px;
+    border-radius:5px;
+    white-space:nowrap;
+    opacity:0;
+    pointer-events:none;
+    transition:opacity .15s ease;
+  }
+  .copy-btn.is-copied .copy-feedback{opacity:1;}
+
+  footer{
+    padding:32px 0 48px;
+    text-align:center;
+    color:var(--ink-soft);
+    font-size:0.82rem;
+  }
+  footer .closing{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:0.72rem;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--line);
+    display:block;
+    margin-bottom:6px;
+  }
+
+  /* ---------- BACK TO TOP ---------- */
+  .back-to-top{
+    position:fixed;
+    bottom:28px;
+    right:28px;
+    z-index:40;
+    width:44px;height:44px;
+    border-radius:50%;
+    background:var(--sage);
+    color:#fff;
+    border:none;
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 4px 14px -4px rgba(46,79,55,0.45);
+    opacity:0;
+    transform:translateY(12px);
+    transition:opacity .25s ease, transform .25s ease, background .15s ease;
+    pointer-events:none;
+  }
+  .back-to-top.is-visible{
+    opacity:1;
+    transform:translateY(0);
+    pointer-events:auto;
+  }
+  .back-to-top:hover{background:var(--sage-deep);}
+
+  /* ---------- RESUME NAV BUTTON ---------- */
+  .btn-resume{
+    font-family:'Inter',sans-serif;
+    font-size:0.82rem;
+    font-weight:600;
+    padding:7px 15px;
+    border-radius:7px;
+    background:var(--sage-tint);
+    color:var(--sage-deep);
+    text-decoration:none;
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    border:1.5px solid var(--sage);
+    transition:background .15s ease, border-color .15s ease;
+    white-space:nowrap;
+  }
+  .btn-resume:hover{background:var(--sage); color:#fff;}
+  @media(max-width:760px){.btn-resume{display:none;}}
+
+  /* ---------- OPEN CARD HIGHLIGHT ---------- */
+  details.t-card[open]{
+    border-left:3px solid var(--sage);
+    padding-left:27px;
+  }
+  details.p-card[open]{
+    border-top-width:3px;
+    box-shadow:0 0 0 1px var(--sage);
+  }
+</style>
+</head>
+<body>
+
+<div id="progressBar" class="progress-bar" role="progressbar" aria-label="Reading progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"></div>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#" class="nav-logo">Jing Chua</a>
+    <input type="checkbox" id="navToggle">
+    <label for="navToggle" class="burger"><span></span><span></span><span></span></label>
+    <nav class="links">
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a href="resume.pdf" class="btn-resume" download aria-label="Download resume PDF">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V3"/><path d="M7 10l5 5 5-5"/><rect x="3" y="17" width="18" height="4" rx="1"/></svg>
+        Resume
+      </a>
+    </nav>
+  </div>
+</header>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
+
+<main class="wrap">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-card ruled reveal">
+      <span class="folio-tag mono">FOLIO 01</span>
+      <h1>Jing Chua</h1>
+      <p class="role">Supply Chain Management &amp; Analytics Student · University of Texas at Dallas</p>
+      <p class="tagline">GPA 3.95 · Dean's List · Building toward a career in Accounting with hands-on experience in operations, invoicing, data entry, and analytics.</p>
+      <span class="transition-line">
+        Supply Chain &amp; Analytics
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+        Accounting
+      </span>
+
+      <div class="hero-cta">
+        <a href="#projects" class="btn btn--solid">View projects</a>
+        <a href="#contact" class="btn btn--ghost">Get in touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-head reveal">
+      <span class="rule-draw"></span>
+      <span class="eyebrow"><span class="folio">Folio 02</span><span class="sep">·</span>Profile</span>
+      <h2>About</h2>
+    </div>
+    <div class="about-grid reveal">
+      <div class="photo-frame">[ photo ]</div>
+      <div class="about-text">
+        <p>I'm a Supply Chain Management &amp; Analytics student at UT Dallas with a 3.95 GPA, consistently on the Dean's List. My coursework spans SAP systems, business analytics, and global logistics — and a growing interest in accounting has me pivoting toward a career where the numbers are the whole job, not just part of it.</p>
+        <p>Outside of class I've taken on roles that sharpen the same fundamentals: managing inventory, leading teams, handling data with tight tolerances, and stepping into operations with real accountability. I'm bilingual in English and Mandarin, a US Citizen eligible to work without restriction, and actively looking for accounting-track opportunities.</p>
+      </div>
+    </div>
+
+    <div class="ledger-block ruled reveal">
+      <div class="ledger-block__title mono">Skills Ledger</div>
+
+      <div class="ledger-filter" role="group" aria-label="Filter skills ledger">
+        <button class="ledger-filter__btn is-active" data-filter="all" aria-pressed="true">All</button>
+        <button class="ledger-filter__btn" data-filter="supply" aria-pressed="false">Technical</button>
+        <button class="ledger-filter__btn" data-filter="accounting" aria-pressed="false">Soft Skills</button>
+      </div>
+
+      <div class="t-account" data-filter="all">
+        <div class="t-account__divider"></div>
+        <div class="t-account__row t-account__row--head">
+          <div class="t-account__cell" data-side="supply">Technical Skills</div>
+          <div class="t-account__cell" data-side="accounting">Soft Skills &amp; Other</div>
+        </div>
+        <div class="t-account__row">
+          <div class="t-account__cell" data-side="supply" data-label="Technical Skills">
+            <ul>
+              <li>Microsoft Office Suite — Excel, PowerPoint, Word</li>
+              <li>Google Suite — Docs, Slides, Sheets, Drive</li>
+              <li>SAP (Supply Chain Information Systems)</li>
+              <li>Spreadsheet Modeling &amp; Analytics</li>
+              <li>Relational Database Design</li>
+            </ul>
+          </div>
+          <div class="t-account__cell" data-side="accounting" data-label="Soft Skills &amp; Other">
+            <ul>
+              <li>Detail-oriented with high accuracy standards</li>
+              <li>Leadership &amp; team training</li>
+              <li>Critical thinking &amp; adaptability</li>
+              <li>English (Fluent) · Mandarin (Conversational)</li>
+              <li>US Citizen — no work restriction</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="section-head reveal">
+      <span class="rule-draw"></span>
+      <span class="eyebrow"><span class="folio">Folio 03</span><span class="sep">·</span>Education</span>
+      <h2>Education</h2>
+    </div>
+
+    <div class="edu-card ruled reveal">
+      <div class="edu-card__top">
+        <div>
+          <span class="edu-dates">Expected May 2027</span>
+          <h3>B.S. in Supply Chain Management &amp; Analytics</h3>
+          <span class="edu-school">University of Texas at Dallas — Richardson, TX</span>
+        </div>
+        <div class="gpa-badge">
+          <span class="gpa-num">3.95</span>
+          <span class="gpa-label">GPA</span>
+        </div>
+      </div>
+
+      <div class="edu-card__divider"></div>
+
+      <div class="deans-list">
+        <span class="deans-list__label">Dean's List</span>
+        <div class="deans-list__chips">
+          <span class="chip">Spring 2023</span>
+          <span class="chip">Fall 2023</span>
+          <span class="chip">Spring 2024</span>
+          <span class="chip">Fall 2024</span>
+          <span class="chip">Fall 2025</span>
+        </div>
+      </div>
+
+      <div class="edu-card__divider"></div>
+
+      <span class="deans-list__label">Relevant Coursework <span style="font-weight:400;text-transform:none;letter-spacing:0;font-size:0.78rem;color:var(--ink-soft);">— click any course to expand</span></span>
+      <div class="coursework-grid">
+
+        <details class="course-card">
+          <summary>
+            <span class="course-name">Spreadsheet Modeling &amp; Analytics</span>
+            <svg class="course-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="course-desc">Develops the ability to use quantitative methods and spreadsheet software to build effective analytical models for decision making in finance and operations.</div>
+        </details>
+
+        <details class="course-card">
+          <summary>
+            <span class="course-name">Global Logistics &amp; Inventory Management</span>
+            <svg class="course-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="course-desc">Covers global logistics concepts, inventory management in supply chain systems, and optimization and data analytics for managing the worldwide distribution of products and services.</div>
+        </details>
+
+        <details class="course-card">
+          <summary>
+            <span class="course-name">Integrated Supply Chain Management</span>
+            <svg class="course-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="course-desc">Examines key players and challenges within a supply chain — facility types, inventory and transportation options, and the role of information in managing supply chains efficiently and effectively.</div>
+        </details>
+
+        <details class="course-card">
+          <summary>
+            <span class="course-name">Business Analytics</span>
+            <svg class="course-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="course-desc">Examines data mining techniques to extract business intelligence, including supervised and unsupervised learning, customer segmentation, classification, and CRM using tools such as Python, R, and SQL.</div>
+        </details>
+
+        <details class="course-card">
+          <summary>
+            <span class="course-name">Supply Chain Info Systems: SAP, AI &amp; Blockchain</span>
+            <svg class="course-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="course-desc">Hands-on with SAP's S/4 HANA ERP system — covering end-to-end supply chain management, MRP inventory planning, and emerging trends in AI and Blockchain solutions in supply chain systems.</div>
+        </details>
+
+        <details class="course-card">
+          <summary>
+            <span class="course-name">Intro to Financial Accounting</span>
+            <svg class="course-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="course-desc">Covers fundamental accounting principles and the preparation of financial statements — including the balance sheet, income statement, and cash flow statement — for external reporting purposes.</div>
+        </details>
+
+        <details class="course-card">
+          <summary>
+            <span class="course-name">Intro to Managerial Accounting</span>
+            <svg class="course-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="course-desc">Focuses on internal accounting for management decision-making — including cost behavior, budgeting, variance analysis, and the use of accounting data to evaluate performance and guide strategy.</div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="section-head reveal">
+      <span class="rule-draw"></span>
+      <span class="eyebrow"><span class="folio">Folio 04</span><span class="sep">·</span>Career History</span>
+      <h2>Experience</h2>
+    </div>
+
+    <div class="timeline">
+
+      <div class="t-item reveal">
+        <details class="t-card ruled">
+          <summary>
+            <div class="t-meta">
+              <span class="t-no">No. 01</span>
+              <span class="t-date">Coming soon</span>
+            </div>
+            <h3>Operations &amp; Billing Intern</h3>
+            <span class="t-org">Pacific Plus International — Dallas, TX</span>
+            <p class="t-teaser">Hands-on with data entry, invoicing, payment processing, and order fulfillment. Details coming soon.</p>
+            <span class="toggle-row">
+              <span class="toggle-label mono show-when-closed">View details</span>
+              <span class="toggle-label mono show-when-open">Hide details</span>
+              <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </summary>
+          <div class="t-detail">
+            <ul>
+              <li>Perform data entry for incoming item receiving, maintaining accurate and up-to-date inventory records.</li>
+              <li>Check outgoing pallets against orders before customer delivery to confirm items and quantities are correct.</li>
+              <li>Prepare customer sales orders and convert them into invoices, adjusting line items when pallet checks identify discrepancies.</li>
+              <li>Learning to process incoming checks and run customer credit card charges for amounts owed.</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+
+      <div class="t-item reveal">
+        <details class="t-card ruled">
+          <summary>
+            <div class="t-meta">
+              <span class="t-no">No. 02</span>
+              <span class="t-date">Mar 2026 — Jun 2026</span>
+            </div>
+            <h3>Boba Barista</h3>
+            <span class="t-org">Chi Cha San Chen — Carrollton, TX</span>
+            <p class="t-teaser">High-accuracy beverage preparation, inventory monitoring, and team collaboration in a fast-paced service environment.</p>
+            <span class="toggle-row">
+              <span class="toggle-label mono show-when-closed">View details</span>
+              <span class="toggle-label mono show-when-open">Hide details</span>
+              <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </summary>
+          <div class="t-detail">
+            <ul>
+              <li>Prepared and served beverages following precise recipes with a ±0.5g margin of error across multiple ingredients to ensure consistent product quality.</li>
+              <li>Monitored and replenished topping inventory to ensure product availability and maintain food safety standards.</li>
+              <li>Managed simultaneous tasks in a fast-paced environment — cash handling, workstation maintenance, and team coordination — to maintain customer experience standards.</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+
+      <div class="t-item reveal">
+        <details class="t-card ruled">
+          <summary>
+            <div class="t-meta">
+              <span class="t-no">No. 03</span>
+              <span class="t-date">Aug 2024 — Jan 2025</span>
+            </div>
+            <h3>Shift Lead</h3>
+            <span class="t-org">Fluffy Fluffy Dessert Cafe — Carrollton, TX</span>
+            <p class="t-teaser">Led inventory control, new employee training, and day-to-day operations for a team of 5+.</p>
+            <span class="toggle-row">
+              <span class="toggle-label mono show-when-closed">View details</span>
+              <span class="toggle-label mono show-when-open">Hide details</span>
+              <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </span>
+          </summary>
+          <div class="t-detail">
+            <ul>
+              <li>Managed daily inventory control for 10+ items, significantly reducing stockouts through proactive monitoring.</li>
+              <li>Led training and onboarding for 5+ new employees on operational procedures and service standards.</li>
+              <li>Supervised operations and coordinated team workflow to maintain service quality and efficiency standards.</li>
+            </ul>
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="section-head reveal">
+      <span class="rule-draw"></span>
+      <span class="eyebrow"><span class="folio">Folio 05</span><span class="sep">·</span>Selected Work</span>
+      <h2>Projects</h2>
+    </div>
+
+    <div class="project-grid">
+      <details class="p-card ruled reveal">
+        <summary>
+          <span class="p-kicker">Academic Project · Aug 2025 – Dec 2025</span>
+          <h3>Client Portfolio &amp; Project Management Database</h3>
+          <p class="p-teaser">Relational Excel database with 5 interconnected tables managing 200+ records for Growth Estates Corporation.</p>
+          <span class="toggle-row">
+            <span class="toggle-label mono show-when-closed">View details</span>
+            <span class="toggle-label mono show-when-open">Hide details</span>
+            <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </span>
+        </summary>
+        <div class="p-detail">
+          <p>Designed a relational Excel database with 5 interconnected tables (Client Profile, Project Scope, Milestones, KPI Outcomes) managing 200+ records for Growth Estates Corporation. Structured data tables and entry fields to meet client specifications, providing the foundation for the team's dashboard. Supported the firm's transition from email-based tracking to a centralized data system for client records.</p>
+          <div class="p-tools">
+            <span class="p-tag">Excel</span>
+            <span class="p-tag">Relational Database Design</span>
+            <span class="p-tag">Dashboard Design</span>
+            <span class="p-tag">Data Modeling</span>
+          </div>
+        </div>
+      </details>
+
+      <details class="p-card ruled reveal">
+        <summary>
+          <span class="p-kicker">Academic Project · Jan 2025 – May 2025</span>
+          <h3>Sustainable Supply Chain Analysis</h3>
+          <p class="p-teaser">Led a team analysis of IKEA's sustainability initiatives and delivered strategic recommendations on global supply chain risk management.</p>
+          <span class="toggle-row">
+            <span class="toggle-label mono show-when-closed">View details</span>
+            <span class="toggle-label mono show-when-open">Hide details</span>
+            <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </span>
+        </summary>
+        <div class="p-detail">
+          <p>Led a comprehensive team analysis of sustainable supply chain integration in global logistics, conducting an in-depth case study of IKEA's sustainability initiatives — including the IWAY supplier code and circular business model. Delivered strategic recommendations on risk management and sustainability applications, drawing insights from major corporations' real-world practices.</p>
+          <div class="p-tools">
+            <span class="p-tag">Supply Chain Analysis</span>
+            <span class="p-tag">Sustainability</span>
+            <span class="p-tag">Risk Management</span>
+            <span class="p-tag">Presentation</span>
+          </div>
+        </div>
+      </details>
+
+      <details class="p-card ruled reveal">
+        <summary>
+          <span class="p-kicker">Academic Project · Aug 2024 – Dec 2024</span>
+          <h3>MagNEATo Product Development Project</h3>
+          <p class="p-teaser">Full project management simulation — charter, WBS, risk matrix, cost analysis, and critical path scheduling.</p>
+          <span class="toggle-row">
+            <span class="toggle-label mono show-when-closed">View details</span>
+            <span class="toggle-label mono show-when-open">Hide details</span>
+            <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </span>
+        </summary>
+        <div class="p-detail">
+          <p>Developed a project charter, scope definition, work breakdown structure (WBS), and risk assessment matrix as part of a comprehensive project management simulation. Created a detailed cost analysis with budget breakdown covering labor, materials, and resource allocation. Designed a project schedule in Excel with task dependencies and critical path analysis to manage the timeline.</p>
+          <div class="p-tools">
+            <span class="p-tag">Project Management</span>
+            <span class="p-tag">Excel</span>
+            <span class="p-tag">WBS &amp; Risk Matrix</span>
+            <span class="p-tag">Cost Analysis</span>
+            <span class="p-tag">Critical Path</span>
+          </div>
+        </div>
+      </details>
+
+      <div class="p-card p-card--empty reveal">
+        <span class="p-kicker">More to come</span>
+        <h3>Additional project</h3>
+        <p>More projects on the way — check back soon.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="section-head reveal">
+      <span class="rule-draw"></span>
+      <span class="eyebrow"><span class="folio">Folio 06</span><span class="sep">·</span>Get in Touch</span>
+      <h2>Contact</h2>
+    </div>
+    <div class="contact-card ruled reveal">
+      <div>
+        <h3>Let's connect</h3>
+        <div class="contact-line">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18v12H3z"/><path d="M3 7l9 6 9-6"/></svg>
+          <a href="mailto:Sharon2Chua@gmail.com">Sharon2Chua@gmail.com</a>
+          <button class="copy-btn" type="button" data-copy="Sharon2Chua@gmail.com" aria-label="Copy email address">
+            <span class="copy-feedback">Copied</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="1.5"/><path d="M5 15V5a1.5 1.5 0 0 1 1.5-1.5H15"/></svg>
+          </button>
+        </div>
+        <div class="contact-line">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/><path d="M10 9h4v2c1-1.5 3-2 5-2 3 0 5 2 5 6v6h-4v-6c0-2-1-3-3-3s-3 1-3 3v6h-4z"/></svg>
+          <a href="https://www.linkedin.com/in/sharon1chua" target="_blank" rel="noopener">linkedin.com/in/sharon1chua</a>
+        </div>
+        <div class="contact-line">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.14 11.9a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.05 1h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 21 15z"/></svg>
+          <span>(469) 818-6498</span>
+        </div>
+      </div>
+      <a href="mailto:Sharon2Chua@gmail.com" class="btn btn--solid">Say hello</a>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <span class="closing">Closing Entry</span>
+  © 2026 Jing Chua
+</footer>
+
+<script>
+  // Scroll-reveal: elements fade in when entering view, fade out when leaving
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      entry.target.classList.toggle('is-visible', entry.isIntersecting);
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -8% 0px' });
+  revealEls.forEach(el => observer.observe(el));
+
+  // Mobile nav auto-close
+  document.querySelectorAll('nav.links a').forEach(link => {
+    link.addEventListener('click', () => {
+      document.getElementById('navToggle').checked = false;
+    });
+  });
+
+  // Skills Ledger filter
+  const filterBtns = document.querySelectorAll('.ledger-filter__btn');
+  const tAccount = document.querySelector('.t-account');
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => { b.classList.remove('is-active'); b.setAttribute('aria-pressed','false'); });
+      btn.classList.add('is-active');
+      btn.setAttribute('aria-pressed','true');
+      tAccount.dataset.filter = btn.dataset.filter;
+    });
+  });
+
+
+  // Scroll progress bar (running balance)
+  const progressBar = document.getElementById('progressBar');
+  function updateProgress() {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = docHeight > 0 ? Math.min(100, (scrollTop / docHeight) * 100) : 0;
+    progressBar.style.width = pct + '%';
+    progressBar.setAttribute('aria-valuenow', Math.round(pct));
+  }
+  window.addEventListener('scroll', () => requestAnimationFrame(updateProgress), { passive: true });
+  updateProgress();
+
+  // Active-section nav highlighting (scrollspy)
+  const navLinkEls = document.querySelectorAll('nav.links a');
+  const sectionEls = document.querySelectorAll('main section[id]');
+  const navObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.getAttribute('id');
+        navLinkEls.forEach(link => {
+          link.classList.toggle('is-active', link.getAttribute('href') === '#' + id);
+        });
+      }
+    });
+  }, { rootMargin: '-40% 0px -50% 0px', threshold: 0 });
+  sectionEls.forEach(sec => navObserver.observe(sec));
+
+  // Click-to-copy email
+  document.querySelectorAll('.copy-btn').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const text = btn.dataset.copy;
+      try {
+        if (navigator.clipboard) {
+          await navigator.clipboard.writeText(text);
+        } else {
+          const temp = document.createElement('textarea');
+          temp.value = text;
+          document.body.appendChild(temp);
+          temp.select();
+          document.execCommand('copy');
+          document.body.removeChild(temp);
+        }
+        btn.classList.add('is-copied');
+        setTimeout(() => btn.classList.remove('is-copied'), 1400);
+      } catch (err) {
+        console.error('Copy failed', err);
+      }
+    });
+  });
+
+  // Back to top
+  const backToTop = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    backToTop.classList.toggle('is-visible', window.scrollY > 400);
+  }, { passive: true });
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
+
+</body>
+</html>
