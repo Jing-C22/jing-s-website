@@ -45,11 +45,7 @@
   html{scroll-behavior:smooth;}
   body{
     margin:0;
-    background-color:var(--oat);
-    background-image:
-      linear-gradient(rgba(35,33,29,0.035) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(35,33,29,0.035) 1px, transparent 1px);
-    background-size:42px 42px;
+    background:var(--oat);
     color:var(--ink);
     font-family:'Inter',sans-serif;
     line-height:1.65;
@@ -201,11 +197,28 @@
     padding:52px clamp(28px,6vw,64px);
     box-shadow:0 1px 2px rgba(38,35,32,0.03);
   }
+  .folio-tag{
+    font-size:0.74rem;
+    font-weight:500;
+    letter-spacing:0.08em;
+    color:var(--ink-soft);
+    margin-bottom:18px;
+    display:flex;
+    align-items:center;
+    gap:10px;
+  }
+  .folio-tag::after{
+    content:"";
+    height:1px;
+    flex:1;
+    background:var(--line);
+  }
+
   .hero-grid{
     display:grid;
     grid-template-columns:1fr 260px;
     gap:48px;
-    align-items:center;
+    align-items:start;
   }
   @media (max-width:880px){
     .hero-grid{grid-template-columns:1fr;}
@@ -214,6 +227,7 @@
   .hero-snapshot{
     border-left:1px solid var(--line);
     padding-left:40px;
+    padding-top:4px;
   }
   @media (max-width:880px){
     .hero-snapshot{
@@ -221,6 +235,7 @@
       border-top:1px solid var(--line);
       padding-left:0;
       padding-top:28px;
+      margin-top:8px;
     }
   }
   .hero-snapshot__title{
@@ -266,22 +281,6 @@
     border-radius:50%;
     background:var(--sage);
     flex-shrink:0;
-  }
-  .folio-tag{
-    font-size:0.74rem;
-    font-weight:500;
-    letter-spacing:0.08em;
-    color:var(--ink-soft);
-    margin-bottom:18px;
-    display:flex;
-    align-items:center;
-    gap:10px;
-  }
-  .folio-tag::after{
-    content:"";
-    height:1px;
-    flex:1;
-    background:var(--line);
   }
 
   .hero h1{
@@ -943,9 +942,9 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-card ruled reveal">
+      <span class="folio-tag mono">FOLIO 01</span>
       <div class="hero-grid">
         <div class="hero-main">
-          <span class="folio-tag mono">FOLIO 01</span>
           <h1>Jing Chua</h1>
           <p class="role">Supply Chain Management &amp; Analytics Student · University of Texas at Dallas</p>
           <p class="tagline">GPA 3.95 · Dean's List · Building toward a career in Accounting with hands-on experience in operations, invoicing, data entry, and analytics.</p>
@@ -973,7 +972,7 @@
           </div>
           <div class="snapshot-row">
             <span class="snap-label">Graduating</span>
-            <span class="snap-value">August 2026</span>
+            <span class="snap-value">May 2027</span>
           </div>
           <div class="snapshot-row">
             <span class="snap-label">Status</span>
