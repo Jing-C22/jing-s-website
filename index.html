@@ -45,7 +45,11 @@
   html{scroll-behavior:smooth;}
   body{
     margin:0;
-    background:var(--oat);
+    background-color:var(--oat);
+    background-image:
+      linear-gradient(rgba(35,33,29,0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(35,33,29,0.035) 1px, transparent 1px);
+    background-size:42px 42px;
     color:var(--ink);
     font-family:'Inter',sans-serif;
     line-height:1.65;
@@ -196,6 +200,72 @@
     border-radius:var(--radius-lg);
     padding:52px clamp(28px,6vw,64px);
     box-shadow:0 1px 2px rgba(38,35,32,0.03);
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1fr 260px;
+    gap:48px;
+    align-items:center;
+  }
+  @media (max-width:880px){
+    .hero-grid{grid-template-columns:1fr;}
+  }
+
+  .hero-snapshot{
+    border-left:1px solid var(--line);
+    padding-left:40px;
+  }
+  @media (max-width:880px){
+    .hero-snapshot{
+      border-left:none;
+      border-top:1px solid var(--line);
+      padding-left:0;
+      padding-top:28px;
+    }
+  }
+  .hero-snapshot__title{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:0.7rem;
+    text-transform:uppercase;
+    letter-spacing:0.1em;
+    color:var(--ink-soft);
+    margin-bottom:18px;
+  }
+  .snapshot-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    padding:11px 0;
+    border-bottom:1px solid var(--line);
+    gap:12px;
+  }
+  .snapshot-row:last-child{border-bottom:none;}
+  .snapshot-row .snap-label{
+    font-size:0.82rem;
+    color:var(--ink-soft);
+  }
+  .snapshot-row .snap-value{
+    font-family:'Spectral',serif;
+    font-weight:600;
+    font-size:0.95rem;
+    color:var(--ink);
+    text-align:right;
+  }
+  .snap-value.status{
+    color:var(--sage-deep);
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    font-family:'Inter',sans-serif;
+    font-weight:600;
+    font-size:0.82rem;
+  }
+  .snap-value.status::before{
+    content:"";
+    width:7px;height:7px;
+    border-radius:50%;
+    background:var(--sage);
+    flex-shrink:0;
   }
   .folio-tag{
     font-size:0.74rem;
@@ -873,19 +943,43 @@
   <!-- HERO -->
   <section class="hero">
     <div class="hero-card ruled reveal">
-      <span class="folio-tag mono">FOLIO 01</span>
-      <h1>Jing Chua</h1>
-      <p class="role">Supply Chain Management &amp; Analytics Student · University of Texas at Dallas</p>
-      <p class="tagline">GPA 3.95 · Dean's List · Building toward a career in Accounting with hands-on experience in operations, invoicing, data entry, and analytics.</p>
-      <span class="transition-line">
-        Supply Chain &amp; Analytics
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
-        Accounting
-      </span>
+      <div class="hero-grid">
+        <div class="hero-main">
+          <span class="folio-tag mono">FOLIO 01</span>
+          <h1>Jing Chua</h1>
+          <p class="role">Supply Chain Management &amp; Analytics Student · University of Texas at Dallas</p>
+          <p class="tagline">GPA 3.95 · Dean's List · Building toward a career in Accounting with hands-on experience in operations, invoicing, data entry, and analytics.</p>
+          <span class="transition-line">
+            Supply Chain &amp; Analytics
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="13 6 19 12 13 18"/></svg>
+            Accounting
+          </span>
 
-      <div class="hero-cta">
-        <a href="#projects" class="btn btn--solid">View projects</a>
-        <a href="#contact" class="btn btn--ghost">Get in touch</a>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn--solid">View projects</a>
+            <a href="#contact" class="btn btn--ghost">Get in touch</a>
+          </div>
+        </div>
+
+        <div class="hero-snapshot">
+          <div class="hero-snapshot__title mono">Snapshot</div>
+          <div class="snapshot-row">
+            <span class="snap-label">GPA</span>
+            <span class="snap-value">3.95</span>
+          </div>
+          <div class="snapshot-row">
+            <span class="snap-label">Location</span>
+            <span class="snap-value">Dallas, TX</span>
+          </div>
+          <div class="snapshot-row">
+            <span class="snap-label">Graduating</span>
+            <span class="snap-value">August 2026</span>
+          </div>
+          <div class="snapshot-row">
+            <span class="snap-label">Status</span>
+            <span class="snap-value status">Open to opportunities</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
